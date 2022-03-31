@@ -1,0 +1,171 @@
+body{
+   background-image: url("bag1.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   backface-visibility: visible;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: brown;
+    
+}
+
+.itema{
+    grid-area: photo;
+    justify-self: center;
+
+}
+
+.itemb{
+    grid-area: appearences;
+
+}
+
+.itemc{
+    grid-area: size;
+
+}
+
+.itemd{
+    grid-area: sticker;
+
+}
+
+.iteme{
+    grid-area: back-font;
+
+}
+
+
+.container{
+    display: grid;
+    grid-template-rows:  [row1]1fr [row2]1fr [row3]1fr [row4]1fr ;
+    grid-template-columns: [colum1]600px [colum2]1fr;
+    justify-content: start;
+
+
+    grid-template-areas:
+    "photo appearences"
+    "photo size"
+    "photo sticker"
+    "photo back-font" ;  
+
+
+}
+
+div{
+
+    color: white;
+}
+
+h2{
+    text-align: center;
+    color: white;
+}
+
+.button1{
+   background-color: rgb(143, 38, 38);
+   width: 200px;
+   height: 50px;
+   border: solid rgb(143, 38, 38);
+}
+
+button:hover{
+    background-color: rgba(117, 106, 106, 0.158);
+    border: solid  rgba(117, 106, 106, 0.158) ;
+}
+.center {
+        display: grid;
+        justify-content: center;
+        align-items: right;
+        height: 50px;
+        grid-template-rows: 50px;
+        grid-template-columns: 200px 200px;
+        grid-template-areas: 
+        "calculate result";
+        
+}
+
+.calculate1{
+    grid-area: calculate;
+
+}
+
+.result{
+    grid-area: result;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: darkgray;
+  }
+
+  fieldset{
+      color: white;
+      border: 1px solid  #dddddd ;
+  }
+
+  .item1{
+      grid-area: photo1;
+      justify-self: center;
+
+  }
+
+  .item2{
+      grid-area: table1;
+  }
+
+  .container1{
+      display: grid;
+      grid-template-columns:200px 1fr;
+      grid-template-rows: 1fr;
+      grid-template: 
+      "photo1 table1";
+  }
+
+
+  @media screen and (max-width: 600px) {
+      .container{
+          display: grid;
+          grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+          grid-template-columns: 1fr;
+          justify-content: start;
+      
+      
+          grid-template-areas:
+          "photo"
+          "photo"
+          "photo"
+          "photo"
+          "appearences"
+          "size"
+          "sticker"
+          "back-font" ;  
+      }
+
+      .container1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template: 
+        "photo1"
+        "table1";
+      }
+      
+  }
